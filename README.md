@@ -7,3 +7,4 @@ WkndPlans is a single page webapp that will input use user input for zip code to
 //Technology Used
 I will be using to HTML, CSS, and Javascript to make this app. I will be using jQuery as a library and will two API, one for weather and one from ticketmaster
 
+![alt text](https://github.com/mujbadar/WkndPlans/issues/1)
