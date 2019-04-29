@@ -11,14 +11,18 @@
     <script src="js/app.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>WknPlans</h1>
-    <h3>Just enter your Zip code and get the most updated weather and events in your area!</h3>
-    <div class="container">
-        <img id="hero-img" src="images/concert-hero.jpg" alt="Concert Image">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>WkndPlans</h1>
+        <h3>Just enter your Zip code and get the most updated weather and events in your area!</h3>
         <form action="index.html" >
           <input type="text" id="text-box" placeholder="Input Location city/zip">
-          <input id="submit" type="submit">
+          <input id="submit" type="submit" href=".weather-info">
         </form>
+      </div>
+    </section>
+
+    <div class="container">
       </div>
     </div>
     <h1>Your local five-day forecast</h1>
@@ -29,8 +33,12 @@
       <div class="weather-card4"></div>
       <div class="weather-card5"></div>
     </div>
-    <div class="event">
-
+    <h1>Your local events</h1>
+    <div id="event">
+      <div class="event-1"></div>
+      <div class="event-2"></div>
+      <div class="event-3"></div>
+      <div class="event-4"></div>
     </div>
   </body>
 </html>

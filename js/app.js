@@ -5,10 +5,12 @@ console.log($);
 //API Vaiables
 ////////////
 
+// Zip code input for both API calls
+let cityCode = '75034'
+
 // Variables for weather API
 const baseWeatherURL = 'https://api.openweathermap.org/data/2.5/forecast?zip='
 const apiWeatherKey = '&appid=ea88b0227f0e326c371545da29d5c540'
-let cityCode = '75034'
 let weatherURL = baseWeatherURL + cityCode + apiWeatherKey + '&units=imperial'
 
 console.log(weatherURL);
@@ -16,7 +18,9 @@ console.log(weatherURL);
 //Variables for event api
 const baseEventURL = 'https://app.ticketmaster.com/discovery/v2/events.json?'
 const apiEventKey = 'apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf'
+let eventURL = baseEventURL + apiEventKey + '&postalCode=' + cityCode
 
+console.log(eventURL);
 
 ///////////////////
 // API calls functions
@@ -76,14 +80,25 @@ const getWeather = () => {
 const getEvent = () => {
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/classifications/KZFzniwnSyZfZ7v7nE.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf",
+    url: eventURL,
     async:true,
     dataType: "json",
     success: function(json) {
               console.log(json);
-              $('.event').html(`
-                <h2> ${json.events}  </h2>
-           `)},
+              $('.event-1').html(`
+                <h2> ${json._embedded.events[0].name}  </h2>
+                <h2> ${json._embedded.events[0].type}  </h2>
+                <h2> ${json._embedded.events[0].images[0].url}  </h2>
+           `),$('.event-2').html(`
+             <h2> ${json._embedded.events[1].name}  </h2>
+             <h2> ${json._embedded.events[1].type}  </h2>
+             <h2> ${json._embedded.events[1].images[0].url}  </h2>
+          `),$('.event-3').html(`
+            <h2> ${json._embedded.events[3].name}  </h2>
+            <h2> ${json._embedded.events[3].type}  </h2>
+            <h2> ${json._embedded.events[3].images[0].url}  </h2>
+     `)
+         },
           error: function(xhr, status, err) {
               // This time, we do not end up here!
            }
@@ -91,7 +106,7 @@ const getEvent = () => {
 }
 
 $(() => {
-/
+
 //////////////
 // Event Listener
 /////////////////
@@ -99,8 +114,9 @@ $(() => {
 // Zip code input
   $('#submit').on('click', (event) => {
     event.preventDefault()
-    $('#text-box').val()
+    cityCode = $('#text-box').val()
     getWeather();
+    getEvent();
   })
 
 })
