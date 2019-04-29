@@ -1,5 +1,5 @@
 
-#hero {
+#hero-img {
   max-width: 100%;
   max-height: 10%;
 }
@@ -14,4 +14,8 @@ body {
   border: 3px solid black;
   font-size: 25px;
   width: 100%
+}
+
+.weatherClass {
+
 }

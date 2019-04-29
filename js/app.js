@@ -25,8 +25,9 @@ const apiEventKey = 'apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf'
 // Weather API
 //////////////
 
-// Use the inputed Zip code to make an API call returning city name, temp,
-// and current weather conditions.
+// 5-Day forecast. Use the inputed Zip code to make an API call returning city
+// name, date, temp, and current weather conditions.
+// The daily 9am forecast is accessed and appended to 'cards' for DOM.
 const getWeather = () => {
   $.ajax({
     url : weatherURL
@@ -90,8 +91,12 @@ const getEvent = () => {
 }
 
 $(() => {
-
+/
+//////////////
 // Event Listener
+/////////////////
+
+// Zip code input
   $('#submit').on('click', (event) => {
     event.preventDefault()
     $('#text-box').val()
