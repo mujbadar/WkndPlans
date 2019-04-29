@@ -6,10 +6,10 @@ console.log($);
 ////////////
 
 // Variables for weather API
-const baseWeatherURL = 'https://api.openweathermap.org/data/2.5/forecast?'
-const apiWeatherKey = 'appid=ea88b0227f0e326c371545da29d5c540'
+const baseWeatherURL = 'https://api.openweathermap.org/data/2.5/forecast?zip='
+const apiWeatherKey = '&appid=ea88b0227f0e326c371545da29d5c540'
 let cityCode = '75034'
-let weatherURL = baseWeatherURL + 'zip=' + cityCode +  '&' + apiWeatherKey
+let weatherURL = baseWeatherURL + cityCode + apiWeatherKey + '&units=imperial'
 
 console.log(weatherURL);
 
@@ -32,10 +32,41 @@ const getWeather = () => {
     url : weatherURL
   }).then((weatherData) => {
     console.log(weatherData);
-    $('.weather').html(`
+    $('.weather-card1').html(`
       <h2> ${weatherData.city.name}  </h2>
-      <h2> ${weatherData.list}  </h2>
-      `)
+      <h2> ${weatherData.list[0].dt_txt}  </h2>
+      <h2> ${weatherData.list[0].main.temp}F  </h2>
+      <h2> ${weatherData.list[0].weather[0].description}  </h2>
+      <h2> ${weatherData.list[0].weather[0].icon}  </h2>
+      `).addClass('weatherClass')
+    $('.weather-card2').html(`
+      <h2> ${weatherData.city.name}  </h2>
+      <h2> ${weatherData.list[8].dt_txt}  </h2>
+      <h2> ${weatherData.list[8].main.temp}F  </h2>
+      <h2> ${weatherData.list[8].weather[0].description}  </h2>
+      <h2> ${weatherData.list[8].weather[0].icon}  </h2>
+      `).addClass('weatherClass')
+    $('.weather-card3').html(`
+      <h2> ${weatherData.city.name}  </h2>
+      <h2> ${weatherData.list[16].dt_txt}  </h2>
+      <h2> ${weatherData.list[16].main.temp}F  </h2>
+      <h2> ${weatherData.list[16].weather[0].description}  </h2>
+      <h2> ${weatherData.list[16].weather[0].icon}  </h2>
+      `).addClass('weatherClass')
+    $('.weather-card4').html(`
+      <h2> ${weatherData.city.name}  </h2>
+      <h2> ${weatherData.list[24].dt_txt}  </h2>
+      <h2> ${weatherData.list[24].main.temp}F  </h2>
+      <h2> ${weatherData.list[24].weather[0].description}  </h2>
+      <h2> ${weatherData.list[24].weather[0].icon}  </h2>
+      `).addClass('weatherClass')
+    $('.weather-card5').html(`
+      <h2> ${weatherData.city.name}  </h2>
+      <h2> ${weatherData.list[32].dt_txt}  </h2>
+      <h2> ${weatherData.list[32].main.temp}F  </h2>
+      <h2> ${weatherData.list[32].weather[0].description}  </h2>
+      <h2> ${weatherData.list[32].weather[0].icon}  </h2>
+      `).addClass('weatherClass')
   })
 }
 
@@ -61,9 +92,9 @@ const getEvent = () => {
 $(() => {
 
 // Event Listener
-  $('form').on('submit', (event) => {
+  $('#submit').on('click', (event) => {
     event.preventDefault()
-    cityCode = $('input[type="text"]').val()
+    $('#text-box').val()
     getWeather();
   })
 
