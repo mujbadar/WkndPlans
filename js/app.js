@@ -72,7 +72,7 @@ const getWeather = () => {
       <h5> Weather Conditions: ${weatherData.list[32].weather[0].description}  </h5>
       <h5> ${weatherData.list[32].weather[0].icon}  </h5>
       `).addClass('weatherClass')
-  
+
   })
 }
 
@@ -181,26 +181,26 @@ const highestEventIndex = $('.event-info').children().length - 1;
 /////////////////
 
 // Zip code input
-  $('#submit').on('click', (event) => {
-    event.preventDefault()
-    cityCode = $('#text-box').val()
-    getWeather();
-    getEvent();
-  });
+$('#submit').on('click', (event) => {
+  event.preventDefault()
+  cityCode = $('#text-box').val()
+  getWeather();
+  getEvent();
+});
 
 // Weather Carousel
 //////////
 
 // Next button
-  $('#next-weather').on('click', () => {
-    console.log('next weather tile');
-    $('.weather-info').children().eq(currentWeatherIndex).css('display', 'none');
-      if (currentWeatherIndex < highestWeatherIndex) {
-        currentWeatherIndex++;
-      } else {
-        currentWeatherIndex = 0;
-      }
-      $('.weather-info').children().eq(currentWeatherIndex).css('display', 'block');
+$('#next-weather').on('click', () => {
+  console.log('next weather tile');
+  $('.weather-info').children().eq(currentWeatherIndex).css('display', 'none');
+    if (currentWeatherIndex < highestWeatherIndex) {
+      currentWeatherIndex++;
+    } else {
+      currentWeatherIndex = 0;
+    }
+    $('.weather-info').children().eq(currentWeatherIndex).css('display', 'block');
   })
 
 // Previous button
