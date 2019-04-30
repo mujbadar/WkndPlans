@@ -2,6 +2,7 @@ body {
   text-align: center;
   margin: 0;
   font-family: sans-serif;
+  background-color: #E8E8E8;
 }
 
 .hero {
@@ -16,6 +17,7 @@ body {
 
   /* Text */
   text-align: center;
+  color: white;
 
   /* Background */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../images/concert-hero.jpg);
@@ -31,6 +33,11 @@ body {
   margin-bottom: 0.5em;
 }
 
+#text-box {
+  padding: 5px;
+  radius: 20px;
+}
+
 .weather-info {
   display: flex;
   flex-wrap: wrap;
@@ -42,9 +49,30 @@ body {
 .weatherClass {
   text-align: center;
   padding:15px;
+  border: 1px solid black;
+  display: none;
+  width: 100%;
 }
 
-#text-box {
-  padding: 5px;
-  radius: 20px;
+.weatherClass:first-of-type {
+  display: block;
+}
+.event-info {
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  font-size: 25px;
+  width: 100%;
+}
+
+.eventClass {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid black;
+  width: 100%;
+  display: none;
+}
+
+.eventClass:first-of-type {
+  display: block;
 }
