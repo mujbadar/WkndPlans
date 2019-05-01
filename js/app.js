@@ -96,7 +96,7 @@ const getEvent = () => {
                 <h4> Event type: ${json._embedded.events[0].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[0].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[0]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass'),
               $('.event-2').html(`
                 <h1> ${json._embedded.events[1].name}</h1>
@@ -104,7 +104,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[1].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[1].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[1]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner" >
               `).addClass('eventClass')
               $('.event-3').html(`
                 <h1> ${json._embedded.events[2].name}</h1>
@@ -112,7 +112,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[2].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[2].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[2]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass')
               $('.event-4').html(`
                 <h1> ${json._embedded.events[3].name}</h1>
@@ -120,7 +120,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[3].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[3].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[3]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass')
               $('.event-5').html(`
                 <h1> ${json._embedded.events[4].name}</h1>
@@ -128,7 +128,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[4].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[4].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[4]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass')
               $('.event-6').html(`
                 <h1> ${json._embedded.events[5].name}</h1>
@@ -136,7 +136,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[5].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[5].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[5]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass')
               $('.event-7').html(`
                 <h1> ${json._embedded.events[6].name}</h1>
@@ -144,7 +144,7 @@ const getEvent = () => {
                 <h4> Event type: ${json._embedded.events[6].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[6].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[6]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass')
               $('.event-8').html(`
                 <h1> ${json._embedded.events[7].name}</h1>
@@ -152,7 +152,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[7].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[7].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[7]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass')
               $('.event-9').html(`
                 <h1> ${json._embedded.events[8].name}</h1>
@@ -160,7 +160,7 @@ const getEvent = () => {
                 <h4> Event type: ${json._embedded.events[8].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[8].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[8]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
                 `).addClass('eventClass')
               $('.event-10').html(`
                 <h1> ${json._embedded.events[9].name}  </h1>
@@ -168,7 +168,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[9].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[9].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[9]._embedded.venues[0].name}<h4>
-                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
+                <img src= 'https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf' alt="Event Banner">
               `).addClass('eventClass')
          },
           error: function(xhr, status, err) {
