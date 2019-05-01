@@ -6,7 +6,7 @@ body {
   background: black;
   display: flex;
   justify-content: flex-end;
-  padding-right: 5px;
+  /* padding: .5em; */
   color: white;
 }
 
@@ -21,4 +21,10 @@ a:hover {
   color: black;
   background-color: white;
   border-radius: 15px;
+}
+
+.footerContainer {
+  background: black;
+  padding: 1.5em;
+  color: white;
 }

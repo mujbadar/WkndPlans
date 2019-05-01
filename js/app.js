@@ -30,7 +30,7 @@ console.log(eventURL);
 //////////////
 
 // 5-Day forecast. Use the inputed Zip code to make an API call returning city
-// name, date, temp, and current weather conditions.
+// name, date, temp, current weather conditions, and weather icon.
 // The daily 9am forecast is accessed and appended to 'cards' for DOM.
 const getWeather = () => {
   $.ajax({
@@ -42,38 +42,39 @@ const getWeather = () => {
       <h3> Date/Time: ${weatherData.list[0].dt_txt}  </h3>
       <h5> Temp: ${weatherData.list[0].main.temp}F  </h5>
       <h5> Weather Conditions: ${weatherData.list[0].weather[0].description}  </h5>
-      <h5> ${weatherData.list[0].weather[0].icon}  </h5>
+      <img src='http://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card2').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[8].dt_txt}  </h3>
       <h5> Temp: ${weatherData.list[8].main.temp}F  </h5>
       <h5> Weather Conditions: ${weatherData.list[8].weather[0].description}  </h5>
-      <h5> ${weatherData.list[8].weather[0].icon}  </h5>
+      <img src='http://openweathermap.org/img/w/${weatherData.list[8].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card3').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[16].dt_txt}  </h3>
       <h5> Temp: ${weatherData.list[16].main.temp}F  </h5>
       <h5> Weather Conditions: ${weatherData.list[16].weather[0].description}  </h5>
-      <h5> ${weatherData.list[16].weather[0].icon}  </h5>
+      <img src='http://openweathermap.org/img/w/${weatherData.list[16].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card4').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[24].dt_txt}  </h3>
       <h5> Temp: ${weatherData.list[24].main.temp}F  </h5>
       <h5> Weather Conditions: ${weatherData.list[24].weather[0].description}  </h5>
-      <h5> ${weatherData.list[24].weather[0].icon}  </h5>
+      <img src='http://openweathermap.org/img/w/${weatherData.list[24].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card5').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[32].dt_txt}  </h3>
       <h5> Temp: ${weatherData.list[32].main.temp}F  </h5>
       <h5> Weather Conditions: ${weatherData.list[32].weather[0].description}  </h5>
-      <h5> ${weatherData.list[32].weather[0].icon}  </h5>
+      <img src='http://openweathermap.org/img/w/${weatherData.list[32].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
 
   })
+
 }
 
 // TicketMaster API
@@ -95,6 +96,7 @@ const getEvent = () => {
                 <h4> Event type: ${json._embedded.events[0].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[0].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[0]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass'),
               $('.event-2').html(`
                 <h1> ${json._embedded.events[1].name}</h1>
@@ -102,6 +104,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[1].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[1].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[1]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
               $('.event-3').html(`
                 <h1> ${json._embedded.events[2].name}</h1>
@@ -109,6 +112,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[2].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[2].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[2]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
               $('.event-4').html(`
                 <h1> ${json._embedded.events[3].name}</h1>
@@ -116,6 +120,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[3].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[3].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[3]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
               $('.event-5').html(`
                 <h1> ${json._embedded.events[4].name}</h1>
@@ -123,6 +128,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[4].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[4].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[4]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
               $('.event-6').html(`
                 <h1> ${json._embedded.events[5].name}</h1>
@@ -130,6 +136,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[5].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[5].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[5]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
               $('.event-7').html(`
                 <h1> ${json._embedded.events[6].name}</h1>
@@ -137,6 +144,7 @@ const getEvent = () => {
                 <h4> Event type: ${json._embedded.events[6].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[6].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[6]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
               $('.event-8').html(`
                 <h1> ${json._embedded.events[7].name}</h1>
@@ -144,6 +152,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[7].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[7].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[7]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
               $('.event-9').html(`
                 <h1> ${json._embedded.events[8].name}</h1>
@@ -151,6 +160,7 @@ const getEvent = () => {
                 <h4> Event type: ${json._embedded.events[8].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[8].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[8]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
                 `).addClass('eventClass')
               $('.event-10').html(`
                 <h1> ${json._embedded.events[9].name}  </h1>
@@ -158,6 +168,7 @@ const getEvent = () => {
                 <h4> Event type:  ${json._embedded.events[9].classifications[0].genre.name}</h4>
                 <h4> Date: ${json._embedded.events[9].dates.start.localDate}<h4>
                 <h4> Venue: ${json._embedded.events[9]._embedded.venues[0].name}<h4>
+                <img src= "https://app.ticketmaster.com/discovery/v2/events/${json._embedded.events[0].id}/images.json?apikey=VpjGo4Q2pHG4BhxfhbmP4bCct9xSOGjf">
               `).addClass('eventClass')
          },
           error: function(xhr, status, err) {

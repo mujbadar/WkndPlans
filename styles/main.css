@@ -13,7 +13,7 @@ body {
   background: black;
   display: flex;
   justify-content: flex-end;
-  padding-right: 5px;
+  /* padding: .5em; */
   color: white;
 }
 
@@ -80,7 +80,7 @@ a:hover {
   background-color: black;
 }
 
-/* Body styling. This containers the styles for the carousels. */
+/* Body styling. This container styles for the carousels. */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -102,6 +102,13 @@ a:hover {
   border-radius: 15px;
   display: none;
   width: 100%;
+  background-image: url(http://www.animatedimages.org/data/media/148/animated-weather-image-0111.gif);
+  background-repeat: no-repeat;
+}
+
+.weatherClass img {
+  height: 2em;
+  width: 2em;
 }
 
 .weatherClass:first-of-type {
@@ -125,6 +132,8 @@ a:hover {
   border-radius: 15px;
   width: 100%;
   display: none;
+  background-image: url(http://www.animatedimages.org/data/media/387/animated-microphone-image-0001.gif);
+  background-repeat: no-repeat;
 }
 
 .eventClass:first-of-type {
