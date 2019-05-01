@@ -1,0 +1,24 @@
+body {
+  font-family: futura;
+}
+
+.menu {
+  background: black;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+  color: white;
+}
+
+a {
+  color: white;
+  padding: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+}

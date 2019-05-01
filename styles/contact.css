@@ -1,0 +1,69 @@
+body {
+  font-family: futura;
+}
+
+.menu {
+  background: black;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+  color: white;
+}
+
+a {
+  color: white;
+  padding: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+
+#submit {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+#submit:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#subject {
+  height: 200px;
+}
+
+.footerContainer {
+  background: black;
+  padding: 1.5em;
+  color: white;
+}
