@@ -21,6 +21,7 @@ $('#submit').on('click', (event) => {
   $('.event-results').show();
   getWeather();
   getEvent();
+  window.scrollBy(0,600).slow()
 });
 
 console.log(cityCode);
