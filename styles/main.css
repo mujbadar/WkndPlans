@@ -2,7 +2,7 @@ body {
   text-align: center;
   margin: 0;
   font-family: futura;
-  background: #E8E8E8;
+  background: #262626;
   padding-bottom: 1.5em;
   border-bottom: 1px solid gray;
 }
@@ -10,7 +10,7 @@ body {
 /* Menu Styles */
 
 .menu {
-  background: black;
+  background: #262626;
   display: flex;
   justify-content: flex-end;
   /* padding: .5em; */
@@ -81,7 +81,48 @@ a:hover {
 }
 
 /* Body styling. This container styles for the carousels. */
-.container {
+
+.weather-results, .event-results h1 {
+  color: white;
+}
+
+/* Swiper Carousel elements. */
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  width: 25%;
+  max-height: 40%;
+  color: black;
+}
+
+.swiper-slide img {
+  width: 50%;
+  height: 35%;
+}
+
+
+/* Footer Styles */
+
+.footerContainer {
+  background: #262626;
+  padding-top: 5.5em;
+  color: white;
+}
+
+/************/
+/* Old code for Carousel */
+/*********************/
+
+/* Body styling. This container styles for the carousels. */
+/* .container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -153,12 +194,4 @@ button {
 button:hover {
   color: white;
   background-color: black;
-}
-
-/* Footer Styles */
-
-.footerContainer {
-  background: black;
-  padding: 1.5em;
-  color: white;
-}
+} */

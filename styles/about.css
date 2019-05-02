@@ -1,9 +1,12 @@
 body {
   font-family: futura;
+  background: #262626;
+  color: white;
+  text-align: center;
 }
 
 .menu {
-  background: black;
+  background: #262626;
   display: flex;
   justify-content: flex-end;
   /* padding: .5em; */
@@ -23,8 +26,13 @@ a:hover {
   border-radius: 15px;
 }
 
+.container {
+  text-align: left;
+  padding: 5em;
+}
+
 .footerContainer {
-  background: black;
-  padding: 1.5em;
+  background: #262626;
+  padding-top: 5.5em;
   color: white;
 }
