@@ -136,6 +136,11 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.eventClass img {
+  width: 50%;
+  max-height: 35%;
+}
+
 .eventClass:first-of-type {
   display: block;
 }
