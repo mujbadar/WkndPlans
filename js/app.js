@@ -1,5 +1,12 @@
 console.log('Hello');
 console.log($);
+////////////
+// App Preloader
+///////////////
+
+// Hide the body elements of the app until user inputs zip
+$('.weather-results').hide();
+$('.event-results').hide();
 
 /////////////
 //API Vaiables
@@ -10,10 +17,13 @@ $('#submit').on('click', (event) => {
   event.preventDefault()
   cityCode = $('#text-box').val()
   console.log(cityCode);
+  $('.weather-results').show();
+  $('.event-results').show();
   getWeather();
   getEvent();
 });
 
+console.log(cityCode);
 // Variables for weather API
 const baseWeatherURL = 'https://api.openweathermap.org/data/2.5/forecast?zip='
 const apiWeatherKey = '&appid=ea88b0227f0e326c371545da29d5c540'
@@ -43,35 +53,35 @@ const getWeather = () => {
     $('.weather-card1').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[0].dt_txt}  </h3>
-      <h5> Temp: ${weatherData.list[0].main.temp}F  </h5>
+      <h5> Temp: ${weatherData.list[0].main.temp}°F  </h5>
       <h5> Weather Conditions: ${weatherData.list[0].weather[0].description}  </h5>
       <img src='http://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card2').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[8].dt_txt}  </h3>
-      <h5> Temp: ${weatherData.list[8].main.temp}F  </h5>
+      <h5> Temp: ${weatherData.list[8].main.temp}°F  </h5>
       <h5> Weather Conditions: ${weatherData.list[8].weather[0].description}  </h5>
       <img src='http://openweathermap.org/img/w/${weatherData.list[8].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card3').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[16].dt_txt}  </h3>
-      <h5> Temp: ${weatherData.list[16].main.temp}F  </h5>
+      <h5> Temp: ${weatherData.list[16].main.temp}°F  </h5>
       <h5> Weather Conditions: ${weatherData.list[16].weather[0].description}  </h5>
       <img src='http://openweathermap.org/img/w/${weatherData.list[16].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card4').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[24].dt_txt}  </h3>
-      <h5> Temp: ${weatherData.list[24].main.temp}F  </h5>
+      <h5> Temp: ${weatherData.list[24].main.temp}°F  </h5>
       <h5> Weather Conditions: ${weatherData.list[24].weather[0].description}  </h5>
       <img src='http://openweathermap.org/img/w/${weatherData.list[24].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
     $('.weather-card5').html(`
       <h1> ${weatherData.city.name}  </h1>
       <h3> Date/Time: ${weatherData.list[32].dt_txt}  </h3>
-      <h5> Temp: ${weatherData.list[32].main.temp}F  </h5>
+      <h5> Temp: ${weatherData.list[32].main.temp}°F  </h5>
       <h5> Weather Conditions: ${weatherData.list[32].weather[0].description}  </h5>
       <img src='http://openweathermap.org/img/w/${weatherData.list[32].weather[0].icon}.png' alt="Weather Icon">
       `).addClass('weatherClass')
@@ -175,7 +185,7 @@ const getEvent = () => {
               `).addClass('eventClass')
          },
           error: function(xhr, status, err) {
-              // This time, we do not end up here!
+              $('.event-info').html(`<h2> No events found in your area </h2>`)
            }
 });
 }
