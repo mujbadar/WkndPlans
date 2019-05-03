@@ -56,22 +56,25 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: 7em;
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  font-size: 6.5em;
+  margin:auto;
+  padding-bottom: .5em;
 }
 
 .hero h3 {
   font-size: 2em;
+  margin: auto;
+  padding-bottom: 2em;
 }
 
 #text-box {
-  padding: 10px;
+  padding: 1em;
   border-radius: 20px;
+
 }
 
 #submit {
-  padding: 5px;
+  padding: .75em;
   border-radius: 20px;
 }
 
@@ -98,13 +101,13 @@ a:hover {
   background-color: white;
   background-position: center;
   background-size: cover;
-  width: 25%;
-  max-height: 40%;
+  max-width: 40%;
+  max-height: 35%;
   color: black;
 }
 
 .swiper-slide img {
-  width: 50%;
+  width: 40%;
   height: 35%;
 }
 
