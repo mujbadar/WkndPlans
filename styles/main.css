@@ -7,6 +7,12 @@ body {
   border-bottom: 1px solid gray;
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .hero h1 {
+    font-size: 4em;
+  }
+}
+
 /* Menu Styles */
 
 .menu {
