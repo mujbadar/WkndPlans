@@ -1,20 +1,25 @@
 # WkndPlans
-This is my first project for SEI Remote Flex
+
+Welcome to WknPlans. The one stop weekend event planner that will give you an updated 5 day weather forecast and local events through Ticketmaster. With a slick UI you can easily plan our your weekend activities.
 
 // Wireframe
 
 ![Image of wireframe](images/WkndPlans-wireframe.png)
 
+////////////////
 
-// Summary
+Summary
+
 ////////////////
 
 
 
 WkndPlans is a single page webapp that will display 5-day forecast and events in the user's local area. The user can input their zipcode into the input box and gain access to vital information to plan out their weekend. This information includes a carousel with a 5-day forecast as well as another carousel that lists local events through TicketMaster.
 
+///////////
 
-// UI images
+UI images
+
 //////////
 
 
@@ -28,8 +33,10 @@ WkndPlans is a single page webapp that will display 5-day forecast and events in
 
 ![Image of Hero](images/CarouselUI.png)
 
+///////////////////
 
-//Technology Used
+Technology Used
+
 //////////////////
 
 
@@ -60,8 +67,11 @@ https://github.com/nolimits4web/Swiper/blob/master/demos/240-effect-coverflow.ht
 
 The carousel is to be integrated with the app and should contain the relevant information pulled from both the TicketMaster API and the OpenWeatherMap API.
 
-// Issues
-//////
+/////////////
+
+Issues
+
+/////////////
 
 
 
