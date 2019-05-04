@@ -6,22 +6,19 @@ Welcome to WknPlans. The one stop weekend event planner that will give you an up
 
 ![Image of wireframe](images/WkndPlans-wireframe.png)
 
-////////////////
 
+
+////////////////
 Summary
-
 ////////////////
-
-
 
 WkndPlans is a single page webapp that will display 5-day forecast and events in the user's local area. The user can input their zipcode into the input box and gain access to vital information to plan out their weekend. This information includes a carousel with a 5-day forecast as well as another carousel that lists local events through TicketMaster.
 
+
+
 ///////////
-
 UI images
-
 //////////
-
 
 
 // Onload
@@ -33,13 +30,11 @@ UI images
 
 ![Image of Hero](images/CarouselUI.png)
 
+
+
 ///////////////////
-
 Technology Used
-
 //////////////////
-
-
 
 This app is coded in HTML, CSS, and Javascript using jQuery as a library. Two APIs were used to the weather and events (openweathermap and ticketmaster). An external css plugin was used for the carousel.  
 
@@ -67,22 +62,20 @@ https://github.com/nolimits4web/Swiper/blob/master/demos/240-effect-coverflow.ht
 
 The carousel is to be integrated with the app and should contain the relevant information pulled from both the TicketMaster API and the OpenWeatherMap API.
 
-/////////////
 
+
+/////////////
 Issues
-
 /////////////
-
-
 
 // First issue that I have not been able to fix is enabling .hide() for zip codes with less than 10 events. To overcome this I hid the pagination on the carousel.
 
 // Second problem is getting the carousel to reset when a new location is inputted.
 
+
+
 //////////
-
 Link to URL
-
 /////////
 
 https://mujbadar.github.io/WkndPlans/
