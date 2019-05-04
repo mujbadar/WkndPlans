@@ -1,7 +1,7 @@
 # WkndPlans
 This is my first project for SEI Remote Flex
 
-![Image of wireframe](images/WkndPlans-wireframe .png)
+![Image of wireframe](images/WkndPlans-wireframe.png)
 
 
 // Summary
