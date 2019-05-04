@@ -113,6 +113,8 @@ a:hover {
   height: 35%;
 }
 
+/* Media Query for smaller screens */
+
 @media screen and (max-width: 767px) {
   body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
