@@ -1,15 +1,30 @@
 # WkndPlans
 This is my first project for SEI Remote Flex
 
+// Wireframe
 ![Image of wireframe](images/WkndPlans-wireframe.png)
 
 
 // Summary
 ////////////////
+
 WkndPlans is a single page webapp that will display 5-day forecast and events in the user's local area. The user can input their zipcode into the input box and gain access to vital information to plan out their weekend. This information includes a carousel with a 5-day forecast as well as another carousel that lists local events through TicketMaster.
+
+
+// UI images
+//////////
+
+// Onload
+![Image of Hero](images/HeroUi.png)
+
+
+// OnSubmit
+![Image of Hero](images/CarouselUi.png)
+
 
 //Technology Used
 //////////////////
+
 This app is coded in HTML, CSS, and Javascript using jQuery as a library. Two APIs were used to the weather and events (openweathermap and ticketmaster). An external css plugin was used for the carousel.  
 
 // Weather API
@@ -32,3 +47,10 @@ The 3d cover-flow effect was used and its source code can be found at:
 https://github.com/nolimits4web/Swiper/blob/master/demos/240-effect-coverflow.html
 
 The carousel is to be integrated with the app and should contain the relevant information pulled from both the TicketMaster API and the OpenWeatherMap API.
+
+// Issues
+//////
+
+// First issue that I have not been able to fix the .hide() for event arrays for zip codes with less events.
+
+// Second problem is getting the carousel the reset when a new location is inputted.
