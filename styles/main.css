@@ -7,21 +7,7 @@ body {
   border-bottom: 1px solid gray;
 }
 
-@media only screen and (max-width: 767px) {
 
-  body {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-
-   h1 {
-      font-size: 3em;
-   }
-
-   h2 {
-      font-size: 2em;
-   }
-
-}
 
 /* Menu Styles */
 
@@ -127,6 +113,24 @@ a:hover {
   height: 35%;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  .hero h1 {
+    font-size: 3em;
+  }
+
+  .hero h3 {
+    font-size: 1.5em;
+  }
+
+  .swiper-slide {
+    width: 50%;
+    height: 50%;
+  }
+}
 
 /* Footer Styles */
 
