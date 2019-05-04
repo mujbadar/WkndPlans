@@ -78,3 +78,11 @@ Issues
 // First issue that I have not been able to fix is enabling .hide() for zip codes with less than 10 events. To overcome this I hid the pagination on the carousel.
 
 // Second problem is getting the carousel to reset when a new location is inputted.
+
+//////////
+
+Link to URL
+
+/////////
+
+https://mujbadar.github.io/WkndPlans/
