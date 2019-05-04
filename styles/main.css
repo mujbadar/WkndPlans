@@ -116,6 +116,7 @@ a:hover {
 /* Media Query for smaller screens */
 
 @media screen and (max-width: 767px) {
+  /* Change font to compress size */
   body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   }
@@ -126,6 +127,10 @@ a:hover {
 
   .hero h3 {
     font-size: 1.5em;
+  }
+  /* Center align the menu for smaller screens */
+  .menu {
+    justify-content: center;
   }
 
   .swiper-slide {
